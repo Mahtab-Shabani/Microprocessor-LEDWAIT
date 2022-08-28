@@ -1,0 +1,122 @@
+L51 CODE BANKING LINKER/LOCATOR V4.08.06        11/03/110  13:22:00  PAGE  1
+WIN16 L51 CODE BANKING LINKER/LOCATOR V4.08.06,  INVOKED BY:
+L51.EXE LEDWAIT.OBJ  to  LEDWAIT.ABS PL(60) PW(80) RS(128) ix 
+
+
+INPUT MODULES INCLUDED
+  LEDWAIT.OBJ(LEDWAIT)
+
+
+LINK MAP OF MODULE: LEDWAIT.ABS (LEDWAIT)
+
+    TYPE     BASE       LENGTH    RELOCATION     SEGMENT NAME
+    ----     ----       ------    ----------     ------------
+
+    * * * * * * *   DATA          M E M O R Y   * * * * * * *
+    REG      0000H      0008H     ABSOLUTE       "REG BANK 0"
+
+    * * * * * * *   CODE          M E M O R Y   * * * * * * *
+    CODE     0000H      0072H     ABSOLUTE       
+
+EXECUTABLE SUMMARY:
+-------------------
+    Total INTERNAL storage requirement:  0008H (8)
+    Total EXTERNAL storage requirement:  0000H (0)
+    Total   CODE   storage requirement:  0072H (114)
+Note:  Summary does not include dynamic stack requirements
+
+
+REFERENCE MAP OF MODULE: LEDWAIT.ABS (LEDWAIT)
+
+SEGMENT
+   +-->CALLED SEGMENT
+---------------------
+
+SYMBOL TABLE FOR LEDWAIT.ABS(LEDWAIT)
+--------------------------------------
+
+    VALUE              TYPE               NAME
+    -----              ----               ----
+
+	-------            MODULE             LEDWAIT
+	C:002EH            SYMBOL             N2
+	C:0043H            SYMBOL             N3
+	C:0058H            SYMBOL             WAIT1
+	C:0009H            SYMBOL             V1
+	C:001EH            SYMBOL             V2
+	C:0033H            SYMBOL             V3
+	C:0048H            SYMBOL             V4
+	C:0065H            SYMBOL             WAIT5
+	C:006BH            SYMBOL             L11
+	C:006BH            SYMBOL             L12
+	C:006BH            SYMBOL             L13
+	C:0000H            SYMBOL             S
+	C:005EH            SYMBOL             L1
+	C:005EH            SYMBOL             L2
+	C:005EH            SYMBOL             L3
+	C:0019H            SYMBOL             N1
+	C:0000H            LINE#              3
+	C:0002H            LINE#              4
+	C:0004H            LINE#              5
+	C:0007H            LINE#              6
+	C:0009H            LINE#              8
+L51 CODE BANKING LINKER/LOCATOR V4.08.06          11/03/110  13:22:00  PAGE  2
+
+	C:000BH            LINE#              9
+	C:000CH            LINE#              10
+	C:000EH            LINE#              11
+	C:000FH            LINE#              12
+	C:0010H            LINE#              13
+	C:0012H            LINE#              14
+	C:0014H            LINE#              15
+	C:0017H            LINE#              16
+	C:0019H            LINE#              18
+	C:001CH            LINE#              19
+	C:001EH            LINE#              21
+	C:0020H            LINE#              22
+	C:0021H            LINE#              23
+	C:0023H            LINE#              24
+	C:0024H            LINE#              25
+	C:0025H            LINE#              26
+	C:0027H            LINE#              27
+	C:0029H            LINE#              28
+	C:002CH            LINE#              29
+	C:002EH            LINE#              31
+	C:0031H            LINE#              32
+	C:0033H            LINE#              34
+	C:0035H            LINE#              35
+	C:0036H            LINE#              36
+	C:0038H            LINE#              37
+	C:0039H            LINE#              38
+	C:003AH            LINE#              39
+	C:003CH            LINE#              40
+	C:003EH            LINE#              41
+	C:0041H            LINE#              42
+	C:0043H            LINE#              44
+	C:0046H            LINE#              45
+	C:0048H            LINE#              47
+	C:004AH            LINE#              48
+	C:004BH            LINE#              49
+	C:004DH            LINE#              50
+	C:004EH            LINE#              51
+	C:004FH            LINE#              52
+	C:0051H            LINE#              53
+	C:0053H            LINE#              54
+	C:0056H            LINE#              55
+	C:0058H            LINE#              58
+	C:005AH            LINE#              59
+	C:005CH            LINE#              60
+	C:005EH            LINE#              64
+	C:0060H            LINE#              65
+	C:0062H            LINE#              66
+	C:0064H            LINE#              67
+	C:0065H            LINE#              70
+	C:0067H            LINE#              71
+	C:0069H            LINE#              72
+	C:006BH            LINE#              76
+	C:006DH            LINE#              77
+	C:006FH            LINE#              78
+	C:0071H            LINE#              79
+	-------            ENDMOD             LEDWAIT
+
+LINK/LOCATE RUN COMPLETE,  NO ERROR FOUND.

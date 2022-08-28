@@ -1,0 +1,133 @@
+MACRO ASSEMBLER LEDWAIT                                    11/03/110 13:22:00 PAGE     1
+
+
+WIN16 MACRO ASSEMBLER A51 V6.03.08
+OBJECT MODULE PLACED IN C:\DOCUME~1\MAH\DESKTOP\LEDWAIT\LEDWAIT.OBJ
+ASSEMBLER INVOKED BY: A51.EXE C:\DOCUME~1\MAH\DESKTOP\LEDWAIT\LEDWAIT.A51 OJ(C:\DOCUME~1\MAH\DESKTOP\LEDWAIT\LEDWAIT.OBJ) PIN(C:\FSI\INC) EP LINES XR DB PL(60) PW(80) RB(0) 
+
+LOC     OBJ           LINE    SOURCE
+                         1    
+  0000                   2    ORG 0000H
+0000    E590             3    S:    MOV A,P1
+0002    5403             4        ANL A,#00000011B
+0004    B40012           5        CJNE A,#0,N1
+0007    7901             6        MOV R1,#00000001B
+                         7    
+0009    89A0             8    V1:   MOV P2,R1
+000B    E9               9        MOV A,R1
+000C    1158            10        ACALL WAIT1
+000E    23              11        RL A
+000F    F9              12        MOV R1,A
+0010    E590            13        MOV A,P1
+0012    5403            14        ANL A,#00000011B
+0014    B400E9          15        CJNE A,#0,S
+0017    80F0            16        JMP V1
+                        17    
+0019    B40112          18    N1:   CJNE A,#1,N2
+001C    7901            19        MOV R1,#00000001B
+                        20    
+001E    89A0            21    V2:   MOV P2,R1
+0020    E9              22        MOV A,R1
+0021    1165            23        ACALL WAIT5
+0023    23              24        RL A
+0024    F9              25        MOV R1,A
+0025    E590            26        MOV A,P1
+0027    5403            27        ANL A,#00000011B
+0029    B401D4          28        CJNE A,#1,S
+002C    80F0            29        JMP V2
+                        30    
+002E    B40212          31    N2:   CJNE A,#2,N3
+0031    7903            32        MOV R1,#00000011B
+                        33    
+0033    89A0            34    V3:   MOV P2, R1
+0035    E9              35        MOV A,R1
+0036    1158            36        ACALL WAIT1
+0038    23              37        RL A
+0039    F9              38        MOV R1,A
+003A    E590            39        MOV A,P1
+003C    5403            40        ANL A,#00000011B
+003E    B402BF          41        CJNE A,#2,S
+0041    80F0            42        JMP V3
+                        43    
+0043    B403BA          44    N3:   CJNE A,#3,S
+0046    7903            45        MOV R1,#00000011B
+                        46    
+0048    89A0            47    V4:   MOV P2,R1
+004A    E9              48        MOV A,R1
+004B    1165            49        ACALL WAIT5
+004D    23              50        RL A
+                        51        MOV R1,A
+MACRO ASSEMBLER LEDWAIT                          11/03/110 13:22:00 PAGE     2
+004E    F9           
+004F    E590            52        MOV A,P1
+0051    5403            53        ANL  A,#00000011B
+0053    B403AA          54        CJNE A,#3,S
+0056    80F0            55        JMP V4
+                        56    
+                        57    WAIT1:  
+0058    79FF            58        MOV R1,#255
+005A    7AFF            59        MOV R2,#255
+005C    7B0A            60        MOV R3,#10
+                        61    L1:  
+                        62    L2:  
+                        63    L3:  
+005E    D9FE            64        DJNZ R1,L1
+0060    DAFC            65        DJNZ R2,L2
+0062    DBFA            66        DJNZ R3,L3
+0064    22              67        RET
+                        68    
+                        69    WAIT5:  
+0065    79FF            70        MOV R1,#255
+0067    7AFF            71        MOV R2,#255
+0069    7B05            72        MOV R3,#5
+                        73    L11:  
+                        74    L12:  
+                        75    L13:  
+006B    D9FE            76        DJNZ R1,L11
+006D    DAFC            77        DJNZ R2,L12
+006F    DBFA            78        DJNZ R3,L13
+0071    22              79        RET
+                        80    END
+MACRO ASSEMBLER LEDWAIT                                    11/03/110 13:22:00 PAGE     3
+
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES             REFERENCES
+
+N2 . . . . . . . .  C ADDR   002EH   A                          18 31# 
+N3 . . . . . . . .  C ADDR   0043H   A                          31 44# 
+P1 . . . . . . . .  D ADDR   0090H   A                          3 13 26 39 52 
+P2 . . . . . . . .  D ADDR   00A0H   A                          8 21 34 47 
+WAIT1. . . . . . .  C ADDR   0058H   A                          10 36 57# 
+V1 . . . . . . . .  C ADDR   0009H   A                          8# 16 
+V2 . . . . . . . .  C ADDR   001EH   A                          21# 29 
+V3 . . . . . . . .  C ADDR   0033H   A                          34# 42 
+V4 . . . . . . . .  C ADDR   0048H   A                          47# 55 
+WAIT5. . . . . . .  C ADDR   0065H   A                          23 49 69# 
+L11. . . . . . . .  C ADDR   006BH   A                          73# 76 
+L12. . . . . . . .  C ADDR   006BH   A                          74# 77 
+L13. . . . . . . .  C ADDR   006BH   A                          75# 78 
+S. . . . . . . . .  C ADDR   0000H   A                          3# 15 28 41 44 54 
+                                                                
+L1 . . . . . . . .  C ADDR   005EH   A                          61# 64 
+L2 . . . . . . . .  C ADDR   005EH   A                          62# 65 
+L3 . . . . . . . .  C ADDR   005EH   A                          63# 66 
+N1 . . . . . . . .  C ADDR   0019H   A                          5 18# 
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    114    ----
+   XDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+REGISTER BANK(S) USED : 0 
+
+ASSEMBLY COMPLETE.   0 WARNING(S)   0 ERROR(S)
